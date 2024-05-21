@@ -20,11 +20,13 @@
             align-items: center;
             height: 100vh;
             width: 100%;
+          height:100%;
         }
 
         .login-box {
             width: 100%;
             max-width: 400px;
+          height:100%;
             padding: 20px;
             background-image: linear-gradient(to left, #07f6070a, #12ebff12, #eeeeee, hsla(0, 100%, 50%, 0.07));
             border-radius: 10px;
@@ -43,7 +45,7 @@
 
         .textbox input {
             width: 100%;
-            padding: 21px;
+            padding:21px;
             border: 1px solid silver;
             border-radius: 15px;
             outline: none;
@@ -122,17 +124,18 @@
 
         @media (max-width: 600px) {
             .login-box {
-                width: 90%;
+                width: 100%;
+              height:100%;
                 padding: 15px;
-                background-image: linear-gradient(to left, #ff000011, #eeeeee, #12ebff21, rgba(7, 246, 7, 0.066));
+                background-image: linear-gradient(to right, #ff000010, #fff, #fff,rgba(7, 246, 7, 0.036));
             }
 
             .textbox input {
-                padding: 12px;
+                padding: 21px;
             }
 
             .textbox label {
-                top: 12px;
+                top: 20px;
                 left: 12px;
             }
 
@@ -160,7 +163,7 @@
             <button type="submit" class="btn">Log in</button><br><br>
             <center><p2 id="forgotPassword">Forgot password?</p2></center>
         </form><br>
-        <input type="button" id="createAccountBtn" value="Create new account" onclick="window.location.href='create.html';"><br><br><br><br><br><br><br>
+        <input type="button" id="createAccountBtn" value="Create new account" onclick="window.location.href='create.html';"><br><br><br><br><br><br><br><br><br><br>
         <center><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png" width="20%" alt="Meta Logo"></center>
     </div>
     <script>
